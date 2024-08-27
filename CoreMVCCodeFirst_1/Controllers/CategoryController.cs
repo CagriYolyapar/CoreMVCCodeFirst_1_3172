@@ -88,13 +88,13 @@ namespace CoreMVCCodeFirst_1.Controllers
             Category c = _db.Categories.Find(id);
             UpdateCategoryRequestModel uCVM = new()
             {
-                CategoryName=c.CategoryName,
-                Description=c.Description,
+                CategoryName = c.CategoryName,
+                Description = c.Description,
                 CategoryID = c.ID
             };
 
 
-            TempData["guncellenecek"] = id; 
+            TempData["guncellenecek"] = id;
 
             return View(uCVM);
         }
@@ -115,5 +115,19 @@ namespace CoreMVCCodeFirst_1.Controllers
             _db.SaveChanges();
             return RedirectToAction("GetCategories");
         }
+
+        public IActionResult DeleteCategory(int id)
+        {
+            _db.Categories.Remove(_db.Categories.Find(id));
+            _db.SaveChanges();
+            return RedirectToAction("GetCategories");
+        }
+
+
+
+
+
+
+        //Update(int oldId, int newID,out bool sonuc)
     }
 }
