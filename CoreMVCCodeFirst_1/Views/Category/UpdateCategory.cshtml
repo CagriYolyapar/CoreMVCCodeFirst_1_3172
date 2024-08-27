@@ -1,0 +1,25 @@
+﻿@model UpdateCategoryRequestModel
+
+<form asp-action="UpdateCategory" asp-controller="Category" method="post">
+
+    <div>
+        <input type="hidden" asp-for="CategoryID"/>
+    </div>
+
+
+    <div class="form-control">
+        <input type="text" asp-for="CategoryName" />
+    </div>
+
+    <div class="form-control">
+        <input type="text" asp-for="Description" />
+    </div>
+
+    <div>
+        <button class="btn btn-primary">Güncelle</button>
+    </div>
+
+
+
+</form>
+
