@@ -4,3 +4,11 @@
 
 3 => Elinizdeki tüm veritabanlarınızı .Net Core MVC projesine entegre ediniz ve crud işlemlerini bagımsız tablolardan gercekleştiriniz...
 
+
+2024.08.28
+
+4 =>  Domain Entity ile yaptıgınız odevleri PureVM ve PageVMlere (MVC tarafında) refactor ediniz...
+
+
+5 => Elinizdeki tüm veritabanlarınızı .Net Core MVC projesine entegre ediniz ve crud işlemlerini bagımsız tablolardan gercekleştiriniz... Yalnız bu sefer bagımlı tablolara veri eklerken combobox(select) yapısını kullanarak varolan verilerden secimi de yapınız...
+

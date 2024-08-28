@@ -91,7 +91,7 @@ namespace CoreMVCCodeFirst_1.Controllers
             {
                 CategoryName = c.CategoryName,
                 Description = c.Description,
-                CategoryID = c.ID
+                ID = c.ID
             };
 
 
@@ -104,13 +104,13 @@ namespace CoreMVCCodeFirst_1.Controllers
         [HttpPost]
         public IActionResult UpdateCategory(UpdateCategoryRequestModel model)
         {
-            if (Convert.ToInt32(TempData["guncellenecek"]) != model.CategoryID)
+            if (Convert.ToInt32(TempData["guncellenecek"]) != model.ID)
             {
                 TempData["message"] = "Ne yapıyorsun arkadasım!!";
                 return RedirectToAction("GetCategories");
             }
 
-            Category original = _db.Categories.Find(model.CategoryID);
+            Category original = _db.Categories.Find(model.ID);
             original.CategoryName = model.CategoryName;
             original.Description = model.Description;
             _db.SaveChanges();

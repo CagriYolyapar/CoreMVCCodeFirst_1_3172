@@ -1,0 +1,37 @@
+﻿@model UpdateProductPageVM
+
+<form asp-action="UpdateProduct" asp-controller="Product" method="post">
+
+    <input type="hidden" asp-for="Product.ID" />
+
+    <div>
+        <input type="text"  asp-for="Product.ProductName" />
+    </div>
+
+    <div>
+        <input type="text"  asp-for="Product.UnitPrice" />
+    </div>
+
+
+    <div>
+
+        @*
+        Alt taraftaki select yapısında asp-items attribute'unun SelectList tipinde bir instance verip bu yapıda , bir eleman secilebilecek bir koleksiyon barındırılacagını söylemiş olduk...Bu SelectList, constructor argümanlarına sırasıyla koleksiyonun kendisini, elemanların arkasında saklayacagı degeri (value'yu) ve kullanıcıya gösterilecek olan display member'i ister...Siz de bu combobox'tan bir secim yaparsanız bu secilen eleman arkasındaki degeri asp-for ile modelbinding yaptıgınız property'e atar...'
+        *@
+
+        <select asp-for="Product.CategoryID" asp-items='new SelectList(Model.Categories,"ID","CategoryName")'>
+
+            <option>Lütfen seciniz</option>
+
+        </select>
+
+
+    </div>
+
+    <div>
+        <button class="btn btn-warning">Güncelle</button>
+    </div>
+</form>
+
+
+

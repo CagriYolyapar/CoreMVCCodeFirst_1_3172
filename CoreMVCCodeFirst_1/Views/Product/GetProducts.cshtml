@@ -9,6 +9,9 @@
                         <th>ID</th>
                         <th>Isim</th>
                         <th>Fiyat</th>
+                        <th>Kategori</th>
+                        <th>Guncelle</th>
+                        <th>Sil</th>
                     </tr>
                 </thead>
 
@@ -19,6 +22,9 @@
                             <td>@item.ID</td>
                             <td>@item.ProductName</td>
                             <td>@item.UnitPrice</td>
+                            <td>@item.CategoryName</td>
+                            <td><a asp-action="UpdateProduct" asp-controller="Product" class="btn btn-warning" asp-route-id="@item.ID">Güncelle</a></td>
+                            <td><a asp-action="DeleteProduct" asp-controller="Product" class="btn btn-danger" asp-route-id="@item.ID">Sil</a></td>
                         </tr>
                     }
                 </tbody>
