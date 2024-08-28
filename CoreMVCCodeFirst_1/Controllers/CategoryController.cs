@@ -24,6 +24,7 @@ namespace CoreMVCCodeFirst_1.Controllers
 
         public CategoryController(MyContext db)
         {
+            
             _db = db;
         }
         public IActionResult GetCategories()
@@ -121,6 +122,9 @@ namespace CoreMVCCodeFirst_1.Controllers
             _db.Categories.Remove(_db.Categories.Find(id));
             _db.SaveChanges();
             return RedirectToAction("GetCategories");
+           
+            
+           
         }
 
 
@@ -130,4 +134,7 @@ namespace CoreMVCCodeFirst_1.Controllers
 
         //Update(int oldId, int newID,out bool sonuc)
     }
+
+
+   
 }

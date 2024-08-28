@@ -9,6 +9,6 @@
         public virtual AppUserProfile Profile { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
 
-
+    
     }
 }

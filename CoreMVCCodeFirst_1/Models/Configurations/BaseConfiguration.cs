@@ -15,3 +15,13 @@ namespace CoreMVCCodeFirst_1.Models.Configurations
         }
     }
 }
+
+
+
+//X Projesi
+// A : IB
+
+
+
+//Y Projesi
+//A :  IC, IB

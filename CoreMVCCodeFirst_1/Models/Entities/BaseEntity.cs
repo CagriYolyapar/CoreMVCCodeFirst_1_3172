@@ -16,4 +16,9 @@ namespace CoreMVCCodeFirst_1.Models.Entities
         public DateTime? DeletedDate { get; set; }
         public DataStatus Status { get; set; }
     }
+
+
+
+
+    
 }
